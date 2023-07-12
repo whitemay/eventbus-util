@@ -13,12 +13,12 @@ readme = "README.md"
 actix = "0.13"
 actix-rt = "2.8"
 bytes = "1.4"
-futures = "*"
+futures = "0.3"
 log = "0.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-simple_logger = { version = "*", features = ["threads"] }
-tokio-rustls = "*"
+simple_logger = { version = "4", features = ["threads"] }
+tokio-rustls = "0.24"
 tokio-util = { version = "0.7.8", features = ["codec"] }
 
 [lib]
