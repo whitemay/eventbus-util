@@ -1,6 +1,16 @@
+use log::LevelFilter;
+use simple_logger::SimpleLogger;
 
 
-#[actix::main]
+
+#[actix_rt::main]
 async fn main() {
-    println!("Hello, world!");
+    SimpleLogger::new()
+        .with_level(LevelFilter::Debug)
+        .with_threads(true)
+        .init()
+        .unwrap();
+    log::debug!("starting example");
+
+    
 }

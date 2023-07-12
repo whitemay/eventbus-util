@@ -16,6 +16,7 @@ bytes = "1.4"
 log = "0.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+simple_logger = { version = "*", features = ["threads"] }
 tokio-util = { version = "0.7.8", features = ["codec"] }
 
 [lib]
