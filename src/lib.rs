@@ -10,6 +10,7 @@ pub trait TypeDecoder<Item> {
 
   fn decode(&mut self, src: &Self::Source) -> Result<Option<Item>, Self::Error>;
 
+  /// 利用try_decode来确保消费的是一个Option对象，而返回的是Result<Option>对象。
   fn try_decode(&mut self, src: &Option<Self::Source>) -> Result<Option<Item>, Self::Error> {
     match src {
       Some(src) => self.decode(src),
